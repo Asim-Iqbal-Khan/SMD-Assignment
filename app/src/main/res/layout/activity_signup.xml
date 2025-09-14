@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/main"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/app_background"
+    android:fillViewport="true"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/back"
+                android:layout_centerVertical="true"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerInParent="true"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Socially"
+                    android:textColor="@color/text_color_primary"
+                    android:textSize="34sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Create An Account and Sign Up"
+                    android:textColor="@color/text_color_secondary"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!-- Profile Picture Section -->
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/camera"
+            android:background="@drawable/circle_bg"
+            android:padding="30dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="24dp">
+
+        </ImageView>
+
+
+        <!-- Form Fields -->
+        <!-- Username -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Username"
+            android:textColor="@color/text_color_secondary"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="munjenko"
+            android:textColor="@color/text_color_primary"
+            android:backgroundTint="@color/white"
+            android:layout_marginBottom="16dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Name"
+            android:textColor="@color/text_color_secondary"
+            android:textSize="16dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Asim"
+            android:textColor="@color/text_color_primary"
+            android:backgroundTint="@color/white"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Last name"
+            android:textColor="@color/text_color_secondary"
+            android:textSize="16dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Khan"
+            android:textColor="@color/text_color_primary"
+            android:backgroundTint="@color/white"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date of Birth"
+            android:textColor="@color/text_color_secondary"
+            android:textSize="16dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="01 - 01 - 2001"
+            android:inputType="date"
+            android:textColorHint="@color/hint_color"
+            android:textColor="@color/text_color_primary"
+            android:backgroundTint="@color/white"
+            android:layout_marginBottom="16dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="E-mail"
+            android:textColor="@color/text_color_secondary"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter E-mail"
+            android:inputType="textEmailAddress"
+            android:textColorHint="@color/hint_color"
+            android:textColor="@color/text_color_primary"
+            android:backgroundTint="@color/white"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:textColor="@color/text_color_secondary"
+            android:textSize="16sp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:text="............"
+                android:textColor="@color/text_color_primary"
+                android:backgroundTint="@color/white"/>
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/visibility"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="8dp"/>
+        </RelativeLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/sgnbtn"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:text="Create an Account"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:layout_marginTop="32dp"
+            app:backgroundTint="@color/kinda_red"
+            app:strokeWidth="2dp"
+            app:strokeColor="@color/grey"
+            app:cornerRadius="20dp"/>
+
+
+
+
+
+    </LinearLayout>
+</ScrollView>

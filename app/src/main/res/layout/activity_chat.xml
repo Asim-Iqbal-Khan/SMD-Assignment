@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+
+    <RelativeLayout
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="10dp">
+
+        <!-- Back button -->
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/back_brown"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"/>
+
+        <!-- Profile pic -->
+        <ImageView
+            android:id="@+id/profile_pic"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_toEndOf="@id/btn_back"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/circle_bg"
+            android:src="@drawable/profile_circular"
+            android:scaleType="centerCrop"
+            android:layout_centerVertical="true"/>
+
+        <!-- Username -->
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/profile_pic"
+            android:layout_marginStart="8dp"
+            android:layout_centerVertical="true"
+            android:text="internshala"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#000"/>
+
+        <!-- Video Call -->
+        <ImageView
+            android:id="@+id/btn_video"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/video"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="40dp"/>
+
+        <!-- Info -->
+        <ImageView
+            android:id="@+id/btn_info"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/info"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <!-- Chat Area -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:weightSum="8"
+        android:gravity="center">
+
+        <!-- Time -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4:49 PM"
+            android:textSize="12sp"
+            android:gravity="bottom"
+            android:textColor="#888"
+            android:layout_weight="8"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/chat_bubble"
+            android:text="Hello there!"
+            android:textColor="#FFF"
+            android:textSize="14sp"
+            android:padding="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="end"/>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/btn_camera"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/camera"/>
+
+
+        <EditText
+            android:id="@+id/message_input"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_toEndOf="@id/btn_camera"
+            android:layout_toStartOf="@id/btn_mic"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:hint="Message..."
+            android:background="@drawable/search_bg"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:textSize="14sp"/>
+
+
+        <ImageView
+
+            android:id="@+id/btn_mic"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="90dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/mic"/>
+
+
+        <ImageView
+
+            android:id="@+id/btn_gallery"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="50dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/gallery"/>
+
+
+        <ImageView
+            android:id="@+id/btn_"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/sticker"/>
+
+    </RelativeLayout>
+</LinearLayout>

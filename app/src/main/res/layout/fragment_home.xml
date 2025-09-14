@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- 🔝 Top Bar -->
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="8dp"
+        android:gravity="center_vertical">
+
+
+        <ImageView
+            android:paddingTop="5dp"
+            android:id="@+id/ic_camera"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/camera"
+            android:contentDescription="Camera" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Socially"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:paddingBottom="5dp"/>
+
+        <!-- Right: Add + DM -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/ic_add"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="16dp"
+                android:contentDescription="Add"
+                android:paddingTop="5dp"
+                android:src="@drawable/tv" />
+
+            <ImageView
+                android:paddingTop="5dp"
+                android:id="@+id/ic_dm"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/sned"
+                android:contentDescription="Messages" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_marginTop="45dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#9B5A5A" />
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/topBar"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 🟠 Stories Row -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <!-- Story Item (repeat for more) -->
+                    <LinearLayout
+                        android:layout_width="72dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:background="@drawable/story_ring"
+                            android:padding="2dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/profile"
+                                android:scaleType="centerCrop"
+                                android:background="@drawable/circle_bg"
+                                android:clipToOutline="true"
+                                android:contentDescription="Story"/>
+
+                        </RelativeLayout>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Your Story"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="72dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:background="@drawable/story_ring"
+                            android:padding="2dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/profile"
+                                android:scaleType="centerCrop"
+                                android:background="@drawable/circle_bg"
+                                android:clipToOutline="true"
+                                android:contentDescription="Story"/>
+
+                        </RelativeLayout>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Saad"
+                            android:textColor="#000000"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <!-- 📰 Post Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginTop="4dp"
+                card_view:cardCornerRadius="0dp"
+                card_view:cardElevation="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!-- Post Header -->
+                    <RelativeLayout
+                        android:id="@+id/postHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        android:gravity="center_vertical">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/postAvatar"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:src="@drawable/profile"
+                            android:scaleType="centerCrop"
+                            card_view:shapeAppearanceOverlay="@style/CircularImage"
+                            android:contentDescription="Avatar"/>
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/postAvatar"
+                            android:layout_marginStart="8dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvUsername"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="joshua_l"
+                                android:textColor="#000000"
+                                android:textStyle="bold"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/tvLocation"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Tokyo, Japan"
+                                android:textColor="#777777"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/ic_more"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/back"
+                            android:contentDescription="More" />
+                    </RelativeLayout>
+
+                    <!-- Post Image -->
+                    <ImageView
+                        android:id="@+id/postImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:src="@drawable/post"
+                        android:scaleType="centerCrop"
+                        android:layout_below="@id/postHeader"
+                        android:contentDescription="Post image" />
+
+                    <TextView
+                        android:id="@+id/pagerPill"
+                        android:layout_width="34dp"
+                        android:layout_height="22dp"
+                        android:layout_alignEnd="@id/postImage"
+                        android:layout_alignTop="@id/postImage"
+                        android:layout_margin="8dp"
+                        android:background="@drawable/pill_dark"
+                        android:gravity="center"
+                        android:text="1/3"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp" />
+
+                    <!-- Actions -->
+                    <LinearLayout
+                        android:id="@+id/actionsRow"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_below="@id/postImage"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp">
+
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:src="@drawable/like"/>
+
+                        <Space android:layout_width="15dp" android:layout_height="0dp" />
+
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:src="@drawable/comment"
+                            android:contentDescription="Comment" />
+
+                        <Space android:layout_width="15dp" android:layout_height="0dp" />
+
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:src="@drawable/sned"
+                            android:contentDescription="Share" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1" />
+
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:src="@drawable/save"
+                            android:contentDescription="Save" />
+                    </LinearLayout>
+
+                    <!-- Likes -->
+                    <TextView
+                        android:id="@+id/tvLikes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/actionsRow"
+                        android:layout_marginStart="12dp"
+                        android:text="Liked by craig_love and 44,686 others"
+                        android:textStyle="bold"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                    <!-- Caption -->
+                    <TextView
+                        android:id="@+id/tvCaption"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvLikes"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginTop="4dp"
+                        android:text="joshua_l The game in Japan was amazing and I want to share some photos"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                    <!-- Time -->
+                    <TextView
+                        android:id="@+id/tvTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvCaption"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginBottom="12dp"
+                        android:text="2 hours ago"
+                        android:textColor="#777777"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="88dp" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

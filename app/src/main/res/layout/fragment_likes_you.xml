@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Tab Titles -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/tab_following"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Following"
+                android:textColor="#888"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tab_you"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="You"
+                android:textStyle="bold"
+                android:textColor="#A05252"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <!-- Underline (left grey, right red) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#E0E0E0"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#A05252"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Follow Requests -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:paddingStart="16dp"
+                android:text="Follow Requests"
+                android:textColor="#A05252"
+                android:textStyle="bold"
+                android:textSize="15sp"/>
+
+            <!-- Section: New -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="New"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:textSize="14sp"/>
+
+            <!-- Row 1 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/profile_circular"
+                    android:background="@drawable/circle_bg"
+                    android:scaleType="centerCrop"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="10dp"
+                    android:text="karennne liked your photo. 1h"
+                    android:textSize="14sp"/>
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/explore1"
+                    android:scaleType="centerCrop"/>
+            </LinearLayout>
+
+            <!-- Section: Today -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="Today"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:textSize="14sp"/>
+
+            <!-- Row 2 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/profile_circular"
+                    android:background="@drawable/circle_bg"
+                    android:scaleType="centerCrop"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="10dp"
+                    android:text="kiero_d, zackjohn and 26 others liked your photo. 3h"
+                    android:textSize="14sp"/>
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/explore2"
+                    android:scaleType="centerCrop"/>
+            </LinearLayout>
+
+            <!-- Section: This Week -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="This Week"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:textSize="14sp"/>
+
+            <!-- Row 3 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/profile_circular"
+                    android:background="@drawable/circle_bg"
+                    android:scaleType="centerCrop"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="10dp"
+                    android:text="craig_love mentioned you in a comment: @jacob_w exactly.. 2d"
+                    android:textSize="14sp"/>
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/explore3"
+                    android:scaleType="centerCrop"/>
+            </LinearLayout>
+
+            <!-- Row 4 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/profile_circular"
+                    android:background="@drawable/circle_bg"
+                    android:scaleType="centerCrop"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="10dp"
+                    android:text="martini_rond started following you. 3d"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:gravity="center"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:text="Message"
+                    android:textSize="13sp"
+                    android:textColor="#000"
+                    android:background="@drawable/message_bg"/>
+
+            </LinearLayout>
+
+            <!-- Row 5 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/profile_circular"
+                    android:background="@drawable/circle_bg"
+                    android:scaleType="centerCrop"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="10dp"
+                    android:text="mis_potter started following you. 3d"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:gravity="center"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:text="Message"
+                    android:textSize="13sp"
+                    android:textColor="#000"
+                    android:background="@drawable/message_bg"/>
+
+            </LinearLayout>
+
+            <!-- Section: This Month -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="This Month"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:textSize="14sp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
