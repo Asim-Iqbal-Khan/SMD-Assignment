@@ -193,10 +193,10 @@
                 android:layout_marginEnd="12dp">
 
                 <com.google.android.material.imageview.ShapeableImageView
-                    android:id="@+id/highlight"
+                    android:id="@+id/new_story"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
-                    android:src="@drawable/mountain11"
+                    android:src="@drawable/add"
                     android:scaleType="centerCrop"
                     app:shapeAppearanceOverlay="@style/CircularImage" />
 
@@ -209,7 +209,6 @@
                     android:gravity="center"/>
             </LinearLayout>
 
-            <!-- Friends -->
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="wrap_content"
@@ -218,6 +217,7 @@
                 android:layout_marginEnd="12dp">
 
                 <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/highlight"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:src="@drawable/mountain11"

@@ -13,6 +13,21 @@
         android:theme="@style/Theme.SOCIALLY"
         tools:targetApi="31">
         <activity
+            android:name=".StoryViewOwnActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StoryEditOwnActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StoryViewOthersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StoryTakeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PostImageActivity"
+            android:exported="false" />
+        <activity
             android:name=".EditProfileActivity"
             android:exported="false" />
         <activity

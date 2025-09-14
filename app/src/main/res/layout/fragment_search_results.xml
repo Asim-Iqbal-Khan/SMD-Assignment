@@ -100,14 +100,14 @@
             android:layout_height="1dp"
             android:background="#E0E0E0"/>
 
-        <!-- Results List -->
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- Row 1: Profile -->
             <LinearLayout
+                android:id="@+id/user"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:orientation="horizontal"

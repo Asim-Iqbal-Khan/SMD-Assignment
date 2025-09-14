@@ -14,6 +14,45 @@
         <item name="android:textColor">#000000</item>
         <item name="android:textSize">14sp</item>
     </style>
+    <style name="StoryEditIcon">
+        <item name="android:layout_width">28dp</item>
+        <item name="android:layout_height">28dp</item>
+        <item name="android:layout_marginHorizontal">8dp</item>
+        <item name="android:tint">@android:color/white</item>
+        <item name="android:contentDescription">Story action</item>
+    </style>
+
+    <style name="StoryBottomText">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+    <!-- Circular background icon (used for all story edit icons) -->
+
+    <!-- Bottom navigation container -->
+    <style name="BottomNavItem">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!-- Bottom nav icon -->
+    <style name="BottomNavIcon">
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:tint">@android:color/white</item>
+    </style>
+
+    <!-- Bottom nav text -->
+    <style name="BottomNavText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_marginTop">4dp</item>
+    </style>
+
 
 
 </resources>

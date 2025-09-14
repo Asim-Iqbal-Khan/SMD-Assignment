@@ -1,5 +1,6 @@
 package com.example.socially
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -24,10 +25,21 @@ class HomeActivity : AppCompatActivity() {
         switchTo(currentMenuId, addIfMissing = true)
 
         bottomNav.setOnItemSelectedListener { item ->
-            if (item.itemId == currentMenuId) return@setOnItemSelectedListener true
-            switchTo(item.itemId, addIfMissing = true)
-            true
+            when (item.itemId) {
+                R.id.nav_add -> {
+                    val intent = Intent(this, PostImageActivity::class.java)
+                    startActivity(intent)
+                    bottomNav.selectedItemId = currentMenuId
+                    false
+                }
+                else -> {
+                    if (item.itemId == currentMenuId) return@setOnItemSelectedListener true
+                    switchTo(item.itemId, addIfMissing = true)
+                    true
+                }
+            }
         }
+
     }
 
     private fun switchTo(menuId: Int, addIfMissing: Boolean) {
@@ -54,7 +66,7 @@ class HomeActivity : AppCompatActivity() {
     private fun createFragment(menuId: Int): Fragment = when (menuId) {
         R.id.nav_home     -> HomeFragment()
         R.id.nav_search   -> SearchFragment()
-//        R.id.nav_add      -> AddFragment()
+        //R.id.nav_add      -> AddFragment()
         R.id.nav_likes    -> LikesFragment()
         R.id.nav_profile  -> ProfileManagement()
         else              -> HomeFragment()

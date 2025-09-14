@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    android:id="@+id/main"
+    tools:context=".StoryViewOwnActivity">
+
+    <!-- Story image with header -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/story_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/mountain916"
+            android:contentDescription="User story" />
+
+        <LinearLayout
+
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:gravity="center_vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/profile"
+                android:contentDescription="Profile picture" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="gursky.studio"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="11h"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/close_icon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/cross"
+                android:tint="@android:color/white"
+                android:contentDescription="Close story" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- Bottom actions -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/black"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="5">
+
+
+        <LinearLayout style="@style/BottomNavItem" android:layout_weight="1">
+            <ImageView style="@style/BottomNavIcon" android:src="@drawable/activity" />
+            <TextView style="@style/BottomNavText" android:text="Activity" />
+        </LinearLayout>
+
+
+        <LinearLayout style="@style/BottomNavItem" android:layout_weight="1">
+            <ImageView style="@style/BottomNavIcon" android:src="@drawable/create" />
+            <TextView style="@style/BottomNavText" android:text="Create" />
+        </LinearLayout>
+
+
+        <LinearLayout style="@style/BottomNavItem" android:layout_weight="1">
+            <ImageView style="@style/BottomNavIcon" android:src="@drawable/facebook" />
+            <TextView style="@style/BottomNavText" android:text="Facebook" />
+        </LinearLayout>
+
+
+        <LinearLayout style="@style/BottomNavItem" android:layout_weight="1">
+            <ImageView style="@style/BottomNavIcon" android:src="@drawable/highlight_added" />
+            <TextView style="@style/BottomNavText" android:text="Highlight" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/BottomNavItem" android:layout_weight="1">
+            <ImageView style="@style/BottomNavIcon" android:src="@drawable/menu" />
+            <TextView style="@style/BottomNavText" android:text="More" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

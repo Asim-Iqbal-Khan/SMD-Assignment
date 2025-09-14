@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/main"
+    tools:context=".StoryEditOwnActivity">
+
+    <!-- Story Background -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/mountain916"
+            android:contentDescription="Story background" />
+
+        <!-- Top action bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:gravity="start|center_vertical">
+
+            <ImageView
+                style="@style/StoryEditIconCircle"
+                android:src="@drawable/cross"
+                android:id="@+id/close_icon" />
+
+            <ImageView
+                style="@style/StoryEditIconCircle"
+                android:src="@drawable/bottom_profile" />
+
+            <ImageView
+                style="@style/StoryEditIconCircle"
+                android:src="@drawable/text" />
+
+            <ImageView
+                style="@style/StoryEditIconCircle"
+                android:src="@drawable/sticker" />
+
+            <ImageView
+                style="@style/StoryEditIconCircle"
+                android:src="@drawable/music" />
+
+            <ImageView
+                style="@style/StoryEditIconCircle"
+                android:src="@drawable/filter" />
+
+            <ImageView
+                style="@style/StoryEditIconCircle"
+                android:src="@drawable/menu" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:gravity="center_vertical">
+
+        <!-- Your Stories Button -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="12dp"
+            android:background="@drawable/your_stories_button_background">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/profile"
+                android:contentDescription="Your Stories Icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Your stories"
+                android:textColor="@android:color/white"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="12dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/close_friends_button_background">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/close_friends_star"
+                android:contentDescription="Close Friends Icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Close Friends"
+                android:textColor="@android:color/white"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/post"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/sned"
+            android:background="@drawable/send_button_background"
+            android:scaleType="centerInside"
+            android:padding="12dp"
+            android:contentDescription="Send Story" />
+    </LinearLayout>
+
+</LinearLayout>
